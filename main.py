@@ -208,7 +208,7 @@ from torch_geometric.data import Data
 data = Data(x=x, y=y, edge_index=edge_index, pos=pos,
             train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
 
-f = open('graph_properties.text', 'w+')
+f = open('graph_properties.txt', 'w+')
 f.write('Graph properties')
 f.write('==============================================================')
 
