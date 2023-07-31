@@ -1,4 +1,5 @@
 from sklearn.manifold import TSNE
+import networkx as nx
 import matplotlib.pyplot as plt
 
 def visualize(h, color, path):
