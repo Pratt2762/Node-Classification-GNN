@@ -13,6 +13,9 @@ import warnings
 warnings.simplefilter("ignore", UserWarning)
 warnings.simplefilter("ignore", DeprecationWarning)
 
+import networkx as nx
+import matplotlib.pyplot as plt
+
 from text_preprocessing import format_text
 
 
