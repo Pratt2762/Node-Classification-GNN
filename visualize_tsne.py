@@ -9,4 +9,5 @@ def visualize(h, color, path):
     plt.yticks([])
 
     plt.scatter(z[:, 0], z[:, 1], s=70, c=color, cmap="Set2")
+    plt.title("t-SNE of Node Embeddings")
     plt.savefig(path)
