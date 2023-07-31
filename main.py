@@ -250,8 +250,10 @@ visualize(out, color=data.y, path='tsne_pre_training.png')
 
 
 # Training the GNN Model
+from training import run_training
+
 epochs = 200
-train_acc_list, val_acc_list, test_acc_list = run_training(model, epochs=200)
+train_acc_list, val_acc_list, test_acc_list = run_training(model, data, epochs=200)
 
 
 # Plotting the training vs Validation Accuracy
