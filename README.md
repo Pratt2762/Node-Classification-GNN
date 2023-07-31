@@ -7,4 +7,4 @@ To run the experiment, follow the given steps -
 2. Upload the dataset as 'data.csv' to the root directory.
 3. Run main.py.
 
-All the files for visualization will be added to the root directory.
+All the files for visualization will be added to the root directory, examples from previously run experiments are given in the visualize folder.
