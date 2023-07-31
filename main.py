@@ -209,16 +209,16 @@ data = Data(x=x, y=y, edge_index=edge_index, pos=pos,
             train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
 
 f = open('graph_properties.txt', 'w+')
-f.write('Graph properties')
-f.write('==============================================================')
+f.write('Graph properties \n')
+f.write('============================================================== \n')
 
 # Gather some statistics about the graph.
-f.write(f'Number of nodes: {data.num_nodes}') #Number of nodes in the graph
-f.write(f'Number of edges: {data.num_edges}') #Number of edges in the graph
-f.write(f'Number of features per node: {data.num_node_features}')
-f.write(f'Average node degree: {data.num_edges / data.num_nodes:.2f}') # Average number of nodes in the graph
-f.write(f'Contains isolated nodes: {data.has_isolated_nodes()}') #Does the graph contains nodes that are not connected
-f.write(f'Contains self-loops: {data.has_self_loops()}') #Does the graph contains nodes that are linked to themselves
+f.write(f'Number of nodes: {data.num_nodes} \n') #Number of nodes in the graph
+f.write(f'Number of edges: {data.num_edges} \n') #Number of edges in the graph
+f.write(f'Number of features per node: {data.num_node_features} \n')
+f.write(f'Average node degree: {data.num_edges / data.num_nodes:.2f} \n') # Average number of nodes in the graph
+f.write(f'Contains isolated nodes: {data.has_isolated_nodes()} \n') #Does the graph contains nodes that are not connected
+f.write(f'Contains self-loops: {data.has_self_loops()} \n') #Does the graph contains nodes that are linked to themselves
 f.write(f'Is undirected: {data.is_undirected()}') #Is the graph an undirected graph
 
 f.close()
