@@ -237,3 +237,35 @@ class GCN(torch.nn.Module):
         return x
 
 model = GCN()
+
+
+# TSNE Plot to visualize the node embeddings in a 2D space
+from visualize_tsne import visualize
+
+model = GCN()
+model.eval()
+
+out = model(data.x, data.edge_index)
+visualize(out, color=data.y, path='tsne_pre_training.png')
+
+
+# Training the GNN Model
+epochs = 200
+train_acc_list, val_acc_list, test_acc_list = run_training(model, epochs=200)
+
+
+# Plotting the training vs Validation Accuracy
+
+plt.plot(range(epochs), train_acc_list, label='train')
+plt.plot(range(epochs), val_acc_list, label='val')
+# plt.plot(range(epochs), test_acc_list, label='test')
+plt.xlabel("epoch")
+plt.ylabel("accuracy")
+plt.legend()
+plt.savefig('accuracy_plot.png')
+
+
+model.eval()
+
+out = model(data.x, data.edge_index)
+visualize(out, color=data.y, path='tsne_post_training.png')
